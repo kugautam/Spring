@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+<bean  id="address" class="org.gautam.in.Address">
+<property name="street" value="channsandra"/>
+<property name="city" value="Bangalore"/>
+<property name="state" value="Karnataka"/>
+<property name="zip" value="764379"/>
+<property name="country" value="India"/>
+</bean>
+
+<bean id="customer" class="org.gautam.in.Customer" autowire="byName">
+<property name="customerId" value="9048784"/>
+<property name="customerName" value="Gautam"/>
+<property name="customerContact" value="9111566037"/>
+<property name="customerAddress" ref="address"/>
+</bean>
+
+</beans>
